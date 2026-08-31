@@ -37,6 +37,9 @@ resources:
       - name: HardwareAddresses
         type: SelectedMapList
         key: hwaddr
+      - name: LeaseTime
+        type: string
+        key: lease_time
       - name: Tag
         type: SelectedMap
         key: set_tag
