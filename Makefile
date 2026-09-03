@@ -4,6 +4,10 @@ generator := $(shell find internal/generate)
 PKG ?=
 TEST ?=
 
+# Format Go code
+fmt:
+	gofmt -w .
+
 .PHONY: testacc
 testacc:
 ifdef PKG
