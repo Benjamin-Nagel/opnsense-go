@@ -142,49 +142,7 @@ if err != nil {
 
 ## Development
 
-### Code generation
-
-The typed controllers and data structs are generated from YAML schema files
-under the `schema/` directory. The generator lives in `internal/generate/`.
-
-Regenerate everything:
-
-```sh
-make all
-```
-
-There are two categories of generated output:
-
-- **Controllers** (`pkg/<service>/controller.go`, `pkg/<service>/*.go`) --
-  one per service, generated from `schema/<service>.yml`.
-- **Opnsense client** (`pkg/opnsense/client.go`) -- aggregates all controllers
-  into a single `Client` interface.
-
-### Adding a new service
-
-1. Create `schema/<service>.yml` describing the endpoints and data types.
-   Use an existing schema file as a reference.
-2. Create `pkg/<service>/generate.go` with the `//go:generate` directive.
-   Copy the file from any existing service package.
-3. Run `make all` to generate the controller and update the opnsense client.
-
-### Running tests
-
-Tests require a live OPNsense instance. Set the following environment variables
-before running:
-
-```sh
-export OPNSENSE_URI="https://<opnsense-host>"
-export OPNSENSE_API_KEY="<key>"
-export OPNSENSE_API_SECRET="<secret>"
-export OPNSENSE_ALLOW_INSECURE="true"  # if using a self-signed certificate
-```
-
-Run tests for a specific package:
-
-```sh
-go test -v ./pkg/<service>/...
-```
+Please check the [contribution documentation](CONTRIBUTING.md)
 
 ## License
 

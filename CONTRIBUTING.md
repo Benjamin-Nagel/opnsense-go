@@ -203,6 +203,7 @@ After changing a schema, regenerate the affected package:
 
 ```bash
 make all [service]
+make all
 ```
 
 Generated files must not be edited manually.
