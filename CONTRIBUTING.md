@@ -98,6 +98,7 @@ Adding support for a new OPNsense module generally consists of the following ste
 4. Generate the API client code.
 5. Add acceptance tests where applicable.
 6. Run formatting and tests.
+7. Add to automatic testing shard at .github/workflows/go-test-reusable.yml.
 
 For example, a new `service` module contains:
 
